@@ -1,0 +1,109 @@
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ============================================
+# Testing & Coverage
+# ============================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Test directory (contains test scripts, logs, and results)
+test/
+
+# ============================================
+# IDE & Editors
+# ============================================
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*~
+
+# ============================================
+# OS-specific
+# ============================================
+.DS_Store
+Thumbs.db
+*.bak
+
+# ============================================
+# Jupyter Notebooks
+# ============================================
+.ipynb_checkpoints/
+
+# ============================================
+# Type checkers & linters
+# ============================================
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+# ============================================
+# ML/Training artifacts
+# ============================================
+wandb/
+runs/
+outputs/
+checkpoints/
+
+# ============================================
+# FlashSVD-specific: Models & Checkpoints
+# ============================================
+# Large pre-trained/finetuned models
+models/
+!models/README.md
+
+# ModernBERT outputs
+ModernBERT/model/
+ModernBERT/out/
+ModernBERT/out_sst2/
+
+# Test and compression outputs (regenerable, large)
+compression_test/
+compression_test_r64_flat/
+test_output/
+
+# Note: benchmark results are tracked in git for reproducibility
+
+# ============================================
+# Large file patterns (model weights)
+# ============================================
+*.pt
+*.pth
+*.bin
+*.safetensors
+!src/**/*.pt
+!src/**/*.pth
+
+# Except: keep small config/metadata files
+!**/config.json
+!**/compression_info.json

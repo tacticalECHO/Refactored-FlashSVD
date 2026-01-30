@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flashsvd"
+version = "0.1.0"
+description = "FlashSVD: Memory-Efficient Inference with Streaming for Low-Rank Models"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Zishan Shao", email = "zs89@duke.edu"},
+]
+keywords = ["deep-learning", "compression", "svd", "llm", "inference", "triton"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Core dependencies (torch/triton installed by user separately)
+dependencies = [
+    "transformers>=4.30.0",
+    "datasets>=2.0.0",
+    "evaluate>=0.3.0",
+    "accelerate>=0.20.0",
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "scikit-learn>=1.0.0",
+    "matplotlib>=3.5.0",
+    "tqdm>=4.60.0",
+    "gradio>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Zishan-Shao/FlashSVD"
+Repository = "https://github.com/Zishan-Shao/FlashSVD"
+Paper = "https://arxiv.org/abs/2508.01506"
+
+[project.scripts]
+# M4: Unified CLI entry point
+flashsvd = "flashsvd.cli:main"
+
+# M2-M3: Keep original commands for compatibility
+flashsvd-compress = "flashsvd.compress:main"
+flashsvd-eval = "flashsvd.evaluate:main"
+
+# M4-M5: Additional commands
+flashsvd-info = "flashsvd.info:main"
+flashsvd-ui = "flashsvd.ui.app:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["flashsvd*"]
+
+[tool.setuptools.package-data]
+flashsvd = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
