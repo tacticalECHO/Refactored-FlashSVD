@@ -276,9 +276,9 @@ FlashSVD/
 
 **Quick Links**:
 - **Contributing**: [`CONTRIBUTING.md`](docs/CONTRIBUTING.md) - How to contribute
-- **Developer guide**: [`CLAUDE.md`](docs/CLAUDE.md) - Architecture and development notes
 - **Dataset guide**: [`DATASET_GUIDE.md`](docs/DATASET_GUIDE.md) - Dataset documentation
 - **UI guide**: [`M5_UI_GUIDE.md`](docs/M5_UI_GUIDE.md) - Web UI usage guide
+- **Repository structure**: [`REPO_STRUCTURE.md`](docs/REPO_STRUCTURE.md) - Project organization
 
 ---
 

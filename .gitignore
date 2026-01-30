@@ -35,6 +35,9 @@ htmlcov/
 # Test directory (contains test scripts, logs, and results)
 test/
 
+# Claude AI instructions (internal development only)
+docs/CLAUDE.md
+
 # ============================================
 # IDE & Editors
 # ============================================
@@ -47,6 +50,9 @@ test/
 *.swp
 *.swo
 *~
+
+# Claude Code configuration
+.claude/
 
 # ============================================
 # OS-specific
