@@ -18,6 +18,7 @@
 ## 🔥 What's New (v0.1.0)
 
 - ✅ **Paper Published**: [FlashSVD paper](https://arxiv.org/abs/2508.01506) demonstrating 70.2% peak memory reduction and 75% transient memory reduction
+- ✅**AAAI 2026 Acceptance**: Our paper *FlashSVD: Memory-Efficient Inference with Streaming for Low-Rank Models* has been accepted to **AAAI 2026**.
 - ✅ **Unified CLI**: Single `flashsvd` command with intuitive subcommands
 - ✅ **Pip installable**: `pip install -e .` for easy setup
 - ✅ **Web UI**: Interactive Gradio interface for compression and evaluation
